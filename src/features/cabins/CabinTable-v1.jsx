@@ -23,14 +23,6 @@ const TableHeader = styled.header`
 `;
 
 function CabinTable() {
-  // const {
-  //   isLoading,
-  //   data: cabins,
-  //   error,
-  // } = useQuery({
-  //   queryKey: ["cabins"],
-  //   queryFn: getCabins,
-  // });
   const { isLoading, cabins } = useCabins();
   const [searchParams] = useSearchParams();
   if (isLoading) return <Spinner />;
